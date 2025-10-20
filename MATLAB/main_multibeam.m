@@ -78,7 +78,7 @@ for ue_idx = 1:length(UE)
 
                 ue_list(ue_idx, gNB1_idx, gNB2_idx, :)          = ue; 
                 um_list(ue_idx, gNB1_idx, gNB2_idx, :)          = um;
-                fprintf("Perfect gain: %d, mmWall gain (opt): %d\n", pow2db(G_gt)/2, pow2db(G_opt)/2)
+                fprintf("Perfect gain: %d, Wall-Street gain (opt): %d\n", pow2db(G_gt)/2, pow2db(G_opt)/2)
                 [af_gt, af_opt] = array_factor(C_gt1, C_gt2, C_tra, C_ref, param, 0);
 
                 graph_beamsteering(gNB1(gNB1_idx),gNB2(gNB2_idx), C_tra, C_ref, C_gt1, C_gt2, af_opt, af_gt, param);
